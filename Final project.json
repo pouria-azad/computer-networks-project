@@ -1,0 +1,1259 @@
+[
+    {
+        "id": "a8d3a8d54ec79b88",
+        "type": "tab",
+        "label": "connection-oriented and connection-less",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "afaf4dbaf8e46b0b",
+        "type": "tab",
+        "label": "Realiable tcp and udp",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bf6d6338326a5130",
+        "type": "tab",
+        "label": "acknowledge",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8d17e29a1d653c91",
+        "type": "tab",
+        "label": "speed test",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8f810ad4cffae83c",
+        "type": "tab",
+        "label": "fragmentation",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b3632aa2b1a78d35",
+        "type": "inject",
+        "z": "a8d3a8d54ec79b88",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 100,
+        "wires": [
+            [
+                "3f0ce3031cf364d2"
+            ]
+        ]
+    },
+    {
+        "id": "3f0ce3031cf364d2",
+        "type": "tcp out",
+        "z": "a8d3a8d54ec79b88",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "800",
+        "beserver": "client",
+        "base64": false,
+        "end": false,
+        "tls": "",
+        "x": 570,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "afeabe1a22a42820",
+        "type": "tcp in",
+        "z": "a8d3a8d54ec79b88",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "800",
+        "datamode": "stream",
+        "datatype": "buffer",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 210,
+        "y": 240,
+        "wires": [
+            [
+                "2f5e68815b619222"
+            ]
+        ]
+    },
+    {
+        "id": "e108c974c233e71b",
+        "type": "tcp in",
+        "z": "a8d3a8d54ec79b88",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "800",
+        "datamode": "stream",
+        "datatype": "buffer",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 210,
+        "y": 360,
+        "wires": [
+            [
+                "5a3e5c46740b64fd"
+            ]
+        ]
+    },
+    {
+        "id": "2f5e68815b619222",
+        "type": "debug",
+        "z": "a8d3a8d54ec79b88",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "5a3e5c46740b64fd",
+        "type": "debug",
+        "z": "a8d3a8d54ec79b88",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "79e132c6393f1096",
+        "type": "udp in",
+        "z": "a8d3a8d54ec79b88",
+        "name": "",
+        "iface": "",
+        "port": "600",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "buffer",
+        "x": 220,
+        "y": 720,
+        "wires": [
+            [
+                "4e70bdb4ea6041c5"
+            ]
+        ]
+    },
+    {
+        "id": "4e70bdb4ea6041c5",
+        "type": "debug",
+        "z": "a8d3a8d54ec79b88",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "b1abf07eed08c8e8",
+        "type": "udp in",
+        "z": "a8d3a8d54ec79b88",
+        "name": "",
+        "iface": "",
+        "port": "600",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "buffer",
+        "x": 220,
+        "y": 820,
+        "wires": [
+            [
+                "bee610893000a4ed"
+            ]
+        ]
+    },
+    {
+        "id": "bee610893000a4ed",
+        "type": "debug",
+        "z": "a8d3a8d54ec79b88",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "2de10dced5c85cc8",
+        "type": "udp in",
+        "z": "a8d3a8d54ec79b88",
+        "name": "",
+        "iface": "",
+        "port": "600",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "buffer",
+        "x": 220,
+        "y": 920,
+        "wires": [
+            [
+                "3103a247266046c2"
+            ]
+        ]
+    },
+    {
+        "id": "3103a247266046c2",
+        "type": "debug",
+        "z": "a8d3a8d54ec79b88",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "b722effc07f3065a",
+        "type": "inject",
+        "z": "a8d3a8d54ec79b88",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 600,
+        "wires": [
+            [
+                "37440eab819a1b97"
+            ]
+        ]
+    },
+    {
+        "id": "37440eab819a1b97",
+        "type": "udp out",
+        "z": "a8d3a8d54ec79b88",
+        "name": "",
+        "addr": "127.0.0.1",
+        "iface": "",
+        "port": "600",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 610,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "99220461c8a38711",
+        "type": "comment",
+        "z": "a8d3a8d54ec79b88",
+        "name": "client",
+        "info": "",
+        "x": 210,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b0f03d44a8f8ed09",
+        "type": "comment",
+        "z": "a8d3a8d54ec79b88",
+        "name": "server 1",
+        "info": "",
+        "x": 220,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a9be80fb7840a595",
+        "type": "comment",
+        "z": "a8d3a8d54ec79b88",
+        "name": "server 2",
+        "info": "",
+        "x": 220,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "8ed48ed330d75b81",
+        "type": "comment",
+        "z": "a8d3a8d54ec79b88",
+        "name": "client",
+        "info": "",
+        "x": 150,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "3d1bebb57e0c1611",
+        "type": "comment",
+        "z": "a8d3a8d54ec79b88",
+        "name": "server 2",
+        "info": "",
+        "x": 220,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "f50c6530b575e2c4",
+        "type": "comment",
+        "z": "a8d3a8d54ec79b88",
+        "name": "server 1",
+        "info": "",
+        "x": 220,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "9b7ee683d08fef9c",
+        "type": "comment",
+        "z": "a8d3a8d54ec79b88",
+        "name": "server 3",
+        "info": "",
+        "x": 220,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "99bf264802c5da94",
+        "type": "inject",
+        "z": "afaf4dbaf8e46b0b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 60,
+        "wires": [
+            [
+                "b672b8df22cdec71"
+            ]
+        ]
+    },
+    {
+        "id": "b672b8df22cdec71",
+        "type": "tcp request",
+        "z": "afaf4dbaf8e46b0b",
+        "name": "",
+        "server": "127.0.0.1",
+        "port": "9909",
+        "out": "sit",
+        "ret": "string",
+        "splitc": " ",
+        "newline": "",
+        "trim": false,
+        "tls": "",
+        "x": 370,
+        "y": 60,
+        "wires": [
+            [
+                "20f718b1c143280c"
+            ]
+        ]
+    },
+    {
+        "id": "20f718b1c143280c",
+        "type": "function",
+        "z": "afaf4dbaf8e46b0b",
+        "name": "function 11",
+        "func": "context.count = context.count || 0 ;\ncontext.count++;\nmsg.payload = context.count;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 60,
+        "wires": [
+            [
+                "2ecd87139eafcb5c"
+            ]
+        ]
+    },
+    {
+        "id": "2ecd87139eafcb5c",
+        "type": "debug",
+        "z": "afaf4dbaf8e46b0b",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "bc350b74949eaa70",
+        "type": "tcp in",
+        "z": "afaf4dbaf8e46b0b",
+        "name": "",
+        "server": "server",
+        "host": "127.0.0.1",
+        "port": "9909",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 270,
+        "y": 180,
+        "wires": [
+            [
+                "cb779312faa18339"
+            ]
+        ]
+    },
+    {
+        "id": "cb779312faa18339",
+        "type": "tcp out",
+        "z": "afaf4dbaf8e46b0b",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "9909",
+        "beserver": "reply",
+        "base64": false,
+        "end": false,
+        "tls": "",
+        "x": 510,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b88539106277e95e",
+        "type": "inject",
+        "z": "afaf4dbaf8e46b0b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 270,
+        "y": 340,
+        "wires": [
+            [
+                "9a78b2903edba867"
+            ]
+        ]
+    },
+    {
+        "id": "9a78b2903edba867",
+        "type": "udp out",
+        "z": "afaf4dbaf8e46b0b",
+        "name": "",
+        "addr": "127.0.0.1",
+        "iface": "",
+        "port": "9910",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 530,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "363e180b992aeea9",
+        "type": "udp in",
+        "z": "afaf4dbaf8e46b0b",
+        "name": "",
+        "iface": "",
+        "port": "9910",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "utf8",
+        "x": 260,
+        "y": 480,
+        "wires": [
+            [
+                "48a476b4cb65207f"
+            ]
+        ]
+    },
+    {
+        "id": "401b979cf7472fd3",
+        "type": "debug",
+        "z": "afaf4dbaf8e46b0b",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "48a476b4cb65207f",
+        "type": "function",
+        "z": "afaf4dbaf8e46b0b",
+        "name": "function 12",
+        "func": "context.count = context.count || 0;\ncontext.count++;\n\nreturn { payload: context.count};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 480,
+        "wires": [
+            [
+                "401b979cf7472fd3"
+            ]
+        ]
+    },
+    {
+        "id": "14e6742a8ba62c3a",
+        "type": "comment",
+        "z": "afaf4dbaf8e46b0b",
+        "name": "client",
+        "info": "",
+        "x": 150,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "60958acada9a6677",
+        "type": "comment",
+        "z": "afaf4dbaf8e46b0b",
+        "name": "server",
+        "info": "",
+        "x": 230,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "40b1757fdac38084",
+        "type": "comment",
+        "z": "afaf4dbaf8e46b0b",
+        "name": "client",
+        "info": "",
+        "x": 250,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1594e4733e2aa627",
+        "type": "comment",
+        "z": "afaf4dbaf8e46b0b",
+        "name": "server",
+        "info": "",
+        "x": 250,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b9786cb8d177461e",
+        "type": "tcp request",
+        "z": "bf6d6338326a5130",
+        "name": "",
+        "server": "127.0.0.1",
+        "port": "45",
+        "out": "sit",
+        "ret": "string",
+        "splitc": " ",
+        "newline": "",
+        "trim": false,
+        "tls": "",
+        "x": 560,
+        "y": 80,
+        "wires": [
+            [
+                "22552ade56b69b06"
+            ]
+        ]
+    },
+    {
+        "id": "f4f1e2da49baefe3",
+        "type": "inject",
+        "z": "bf6d6338326a5130",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "b9786cb8d177461e"
+            ]
+        ]
+    },
+    {
+        "id": "22552ade56b69b06",
+        "type": "debug",
+        "z": "bf6d6338326a5130",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "fadc3da8d53750a1",
+        "type": "tcp out",
+        "z": "bf6d6338326a5130",
+        "name": "",
+        "host": "",
+        "port": "",
+        "beserver": "reply",
+        "base64": false,
+        "end": false,
+        "tls": "",
+        "x": 570,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "0bed1cc5b51dc2ae",
+        "type": "function",
+        "z": "bf6d6338326a5130",
+        "name": "function 10",
+        "func": "msg.payload = \"I am the server and I got \" + msg.payload ;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 240,
+        "wires": [
+            [
+                "fadc3da8d53750a1"
+            ]
+        ]
+    },
+    {
+        "id": "0de8377a07e2a940",
+        "type": "tcp in",
+        "z": "bf6d6338326a5130",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "45",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "0bed1cc5b51dc2ae"
+            ]
+        ]
+    },
+    {
+        "id": "f94ed47640ed0ae2",
+        "type": "comment",
+        "z": "bf6d6338326a5130",
+        "name": "client",
+        "info": "",
+        "x": 170,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "9cbf1ea9e5abb247",
+        "type": "comment",
+        "z": "bf6d6338326a5130",
+        "name": "server",
+        "info": "",
+        "x": 160,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "f9f213c2aa86a501",
+        "type": "inject",
+        "z": "8d17e29a1d653c91",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 320,
+        "wires": [
+            [
+                "5cd43007d3b1568d",
+                "b687bf9833748c40"
+            ]
+        ]
+    },
+    {
+        "id": "5cd43007d3b1568d",
+        "type": "tcp out",
+        "z": "8d17e29a1d653c91",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "75",
+        "beserver": "client",
+        "base64": false,
+        "end": false,
+        "tls": "",
+        "x": 500,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "b687bf9833748c40",
+        "type": "udp out",
+        "z": "8d17e29a1d653c91",
+        "name": "",
+        "addr": "127.0.0.1",
+        "iface": "",
+        "port": "76",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 490,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "74a0f13f8f83b74d",
+        "type": "tcp in",
+        "z": "8d17e29a1d653c91",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "75",
+        "datamode": "stream",
+        "datatype": "buffer",
+        "newline": "",
+        "topic": "127.0.0.1",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 710,
+        "y": 240,
+        "wires": [
+            [
+                "d897e8cd595cd395"
+            ]
+        ]
+    },
+    {
+        "id": "1357062a4ee831f3",
+        "type": "udp in",
+        "z": "8d17e29a1d653c91",
+        "name": "",
+        "iface": "",
+        "port": "76",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "buffer",
+        "x": 710,
+        "y": 420,
+        "wires": [
+            [
+                "66144d6c3e94029f"
+            ]
+        ]
+    },
+    {
+        "id": "90e6658ec61a4ddc",
+        "type": "debug",
+        "z": "8d17e29a1d653c91",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "fb84d2ba519f5c38",
+        "type": "debug",
+        "z": "8d17e29a1d653c91",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d897e8cd595cd395",
+        "type": "adv ping",
+        "z": "8d17e29a1d653c91",
+        "name": "",
+        "host": "www.google.com",
+        "x": 890,
+        "y": 240,
+        "wires": [
+            [
+                "90e6658ec61a4ddc"
+            ]
+        ]
+    },
+    {
+        "id": "66144d6c3e94029f",
+        "type": "adv ping",
+        "z": "8d17e29a1d653c91",
+        "name": "",
+        "host": "www.google.com",
+        "x": 890,
+        "y": 420,
+        "wires": [
+            [
+                "fb84d2ba519f5c38"
+            ]
+        ]
+    },
+    {
+        "id": "fa497411eae65c40",
+        "type": "comment",
+        "z": "8d17e29a1d653c91",
+        "name": "client",
+        "info": "",
+        "x": 470,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "2d2aaeeb96504ad2",
+        "type": "comment",
+        "z": "8d17e29a1d653c91",
+        "name": "client",
+        "info": "",
+        "x": 450,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "8fe68c7c4e8f1861",
+        "type": "comment",
+        "z": "8d17e29a1d653c91",
+        "name": "server",
+        "info": "",
+        "x": 710,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "d3b1f401de55af7a",
+        "type": "comment",
+        "z": "8d17e29a1d653c91",
+        "name": "server",
+        "info": "",
+        "x": 710,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "2a6873be3f4441b9",
+        "type": "inject",
+        "z": "8f810ad4cffae83c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"squadName\":\"Super hero squad\",\"homeTown\":\"Metro City\",\"formed\":2016,\"secretBase\":\"Super tower\",\"active\":true,\"members\":[{\"name\":\"Molecule Man\",\"age\":29,\"secretIdentity\":\"Dan Jukes\",\"powers\":[\"Radiation resistance\",\"Turning tiny\",\"Radiation blast\"]},{\"name\":\"Madame Uppercut\",\"age\":39,\"secretIdentity\":\"Jane Wilson\",\"powers\":[\"Million tonne punch\",\"Damage resistance\",\"Superhuman reflexes\"]},{\"name\":\"Eternal Flame\",\"age\":1000000,\"secretIdentity\":\"Unknown\",\"powers\":[\"Immortality\",\"Heat Immunity\",\"Inferno\",\"Teleportation\",\"Interdimensional travel\"]}]}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 240,
+        "wires": [
+            [
+                "5a70a0bc0a2e11aa"
+            ]
+        ]
+    },
+    {
+        "id": "266a1e6e4c6e3336",
+        "type": "tcp request",
+        "z": "8f810ad4cffae83c",
+        "name": "",
+        "server": "127.0.0.1",
+        "port": "20011",
+        "out": "time",
+        "ret": "string",
+        "splitc": "0",
+        "newline": "",
+        "trim": false,
+        "tls": "",
+        "x": 950,
+        "y": 220,
+        "wires": [
+            [
+                "4c3b08911aa21f61"
+            ]
+        ]
+    },
+    {
+        "id": "4c3b08911aa21f61",
+        "type": "debug",
+        "z": "8f810ad4cffae83c",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1026211ea011a5e4",
+        "type": "switch",
+        "z": "8f810ad4cffae83c",
+        "name": "",
+        "property": "$length(msg.payload)\t",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "2",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 220,
+        "wires": [
+            [
+                "266a1e6e4c6e3336"
+            ]
+        ]
+    },
+    {
+        "id": "8496ed8d16d717fd",
+        "type": "function",
+        "z": "8f810ad4cffae83c",
+        "name": "function 3",
+        "func": "let MP= msg.payload;\nlet k=1;\n\nfor (let i = 2, j=0; i <= msg.payload.length+1; i+=2,j+=2){\n    k = k + 1;\n    msg.payload = msg.payload.substring(j, i)+\"***\"+k;\n   \n    node.send(msg);\n    msg.payload = MP; \n     \n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 320,
+        "wires": [
+            [
+                "312102a9ebadf484"
+            ]
+        ]
+    },
+    {
+        "id": "2ae579c2dadf4de2",
+        "type": "switch",
+        "z": "8f810ad4cffae83c",
+        "name": "",
+        "property": "$length(msg.payload)\t",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "2",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 320,
+        "wires": [
+            [
+                "8496ed8d16d717fd"
+            ]
+        ]
+    },
+    {
+        "id": "312102a9ebadf484",
+        "type": "delay",
+        "z": "8f810ad4cffae83c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 810,
+        "y": 320,
+        "wires": [
+            [
+                "266a1e6e4c6e3336"
+            ]
+        ]
+    },
+    {
+        "id": "5a70a0bc0a2e11aa",
+        "type": "json",
+        "z": "8f810ad4cffae83c",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 310,
+        "y": 240,
+        "wires": [
+            [
+                "2ae579c2dadf4de2",
+                "1026211ea011a5e4"
+            ]
+        ]
+    },
+    {
+        "id": "40ff34ef2704c033",
+        "type": "debug",
+        "z": "8f810ad4cffae83c",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "3ab6ba95807ec293",
+        "type": "tcp out",
+        "z": "8f810ad4cffae83c",
+        "name": "",
+        "host": "",
+        "port": "",
+        "beserver": "reply",
+        "base64": false,
+        "end": false,
+        "tls": "",
+        "x": 740,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "5e4cbc171a0875db",
+        "type": "function",
+        "z": "8f810ad4cffae83c",
+        "name": "function 9",
+        "func": "let VALUE= msg.payload;\nmsg.payload = \"i listen \"+VALUE;\nlet split = msg.payload.split(\"***\");\nmsg.payload = split[1];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 540,
+        "wires": [
+            [
+                "3ab6ba95807ec293"
+            ]
+        ]
+    },
+    {
+        "id": "d6e127a8334a4a3a",
+        "type": "tcp in",
+        "z": "8f810ad4cffae83c",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "20011",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 340,
+        "y": 540,
+        "wires": [
+            [
+                "5e4cbc171a0875db",
+                "40ff34ef2704c033"
+            ]
+        ]
+    },
+    {
+        "id": "dc603313172abce8",
+        "type": "comment",
+        "z": "8f810ad4cffae83c",
+        "name": "client",
+        "info": "",
+        "x": 330,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "6b131e74376f8dc1",
+        "type": "comment",
+        "z": "8f810ad4cffae83c",
+        "name": "server",
+        "info": "",
+        "x": 330,
+        "y": 500,
+        "wires": []
+    }
+]
